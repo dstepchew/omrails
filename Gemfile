@@ -5,6 +5,7 @@ gem 'bootstrap-sass'
 gem 'devise'
 gem 'jquery-rails'
 gem 'simple_form'
+gem "paperclip", "~> 3.0"
 
 group :production do
 	gem 'pg'
