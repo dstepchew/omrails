@@ -74,3 +74,33 @@ p {
   color: black;
   text-decoration: none;
 }
+
+/* Required for jquery masonry */
+
+.box {
+  margin:5px;
+  padding:5px;
+  font-size: 11px;
+  line-height: 1.4em;
+  float:left;
+  -webkit-border-fadius:5px;
+  -moz-border-radius:5px;
+  border-radius:5px;
+  box-shadow: 1px 1px 10px #444;
+  width:214px;
+
+}
+
+.box img {
+  display:block;
+  width:100%;
+  -webkit-border-fadius:5px;
+  -moz-border-radius:5px;
+  border-radius:5px;
+
+}
+
+.description {
+  margin: 10px 0px 5px 0px;
+
+}
