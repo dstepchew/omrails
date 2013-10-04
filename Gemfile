@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', '~> 2.2.2.0'
 gem 'devise'
 gem 'jquery-rails'
 gem 'simple_form'

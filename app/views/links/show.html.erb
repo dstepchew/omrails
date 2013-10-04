@@ -1,0 +1,17 @@
+<div class="row">
+	<div class="span6 offset3">
+		<div class="well">
+			<p>
+		  <%= @link.description %>
+		</p>
+		<p>
+		  <%= @link.user.firstname %>
+		</p>
+
+
+			<%= link_to 'Edit', edit_link_path(@link) %> |
+			<%= link_to 'Back', links_path %>
+
+		</div>
+	</div>
+</div>
