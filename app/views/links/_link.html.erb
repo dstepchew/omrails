@@ -1,0 +1,16 @@
+<div class="box">
+    
+   <p class="description">
+    <%= link.description %>
+   </p>
+   <p>
+   	Posted By <%= link.user.firstname %>
+   </p>
+   <p> 
+    
+   </p> 
+    <% if current_user == link.user %>
+	    <%= link_to 'Edit', edit_link_path(link) %>
+	    <%= link_to 'Destroy', link, method: :delete, data: { confirm: 'Are you sure?' } %>
+	<% end %>
+</div>
