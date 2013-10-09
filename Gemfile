@@ -6,7 +6,7 @@ gem 'devise'
 gem 'jquery-rails'
 gem 'simple_form'
 gem "paperclip", "~> 3.0"
-gem "aws-s3", :require => "aws/s3"
+gem 'aws-sdk'
 
 group :production do
 	gem 'pg'
