@@ -5,7 +5,7 @@ gem 'bootstrap-sass', '~> 2.2.2.0'
 gem 'devise'
 gem 'jquery-rails'
 gem 'simple_form'
-gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+gem 'paperclip', '~> 3.4.1'
 gem 'aws-sdk'
 
 group :production do
