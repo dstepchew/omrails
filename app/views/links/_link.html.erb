@@ -1,16 +1,16 @@
 <div class="box">
-    
+    <%= link_to (image_tag link.image(:medium)), link %>
    <p class="description">
     <%= link.description %>
    </p>
    <p>
-   	Posted By <%= link.user.firstname %>
+    Posted By <%= link.user.firstname %>
    </p>
    <p> 
     
    </p> 
     <% if current_user == link.user %>
-	    <%= link_to 'Edit', edit_link_path(link) %>
-	    <%= link_to 'Destroy', link, method: :delete, data: { confirm: 'Are you sure?' } %>
-	<% end %>
+      <%= link_to 'Edit', edit_link_path(link) %>
+      <%= link_to 'Delete', link, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
 </div>
