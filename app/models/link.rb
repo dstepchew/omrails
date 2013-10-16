@@ -1,5 +1,5 @@
 class Link < ActiveRecord::Base
-  attr_accessible :description, :image, :image_remote_url, :image_file_name
+  attr_accessible :description, :image, :image_remote_url, :store_name, :price, :link_remote_url
 
 
   validates :description, presence: true
@@ -7,6 +7,9 @@ class Link < ActiveRecord::Base
   validates_attachment :image, presence: true, 
   								content_type: { content_type: ['image/jpeg','image/jpg','image/png','image/gif'] },
   								size: { less_than: 5.megabytes }
+  validates :store_name, presence: true
+  validates :price, presence: true
+  validates :link_remote_url, presence: true
 
   belongs_to :user
   has_attached_file :image, styles: { medium: "320x240>"}

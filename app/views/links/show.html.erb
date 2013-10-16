@@ -2,12 +2,10 @@
 	<div class="span6 offset3">
 		<div class="well">
 			<%= image_tag @link.image %>
-		<p>
-		  <%= @link.description %>
-		</p>
-		<p>
-		  <%= @link.user.firstname %>
-		</p>
+	<p><%= @link.description %> from <%= link_to @link.store_name, @link.link_remote_url, :target => "_blank" %></p>
+    <p>Created <%= @link.created_at.strftime("%b %d, %Y") %></p>
+    <p>Starting Price <%= link_to number_to_currency(@link.price, :unit => "$", :separator => "."), @link.link_remote_url, :target => "_blank" %></p>
+
 		<% if current_user == @link.user %>
 			<%= link_to 'Edit', edit_link_path(@link) %> |
 		<% end %>
