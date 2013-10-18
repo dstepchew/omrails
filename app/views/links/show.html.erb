@@ -5,6 +5,7 @@
 	<p><%= @link.description %> from <%= link_to @link.store_name, @link.link_remote_url, :target => "_blank" %></p>
     <p>Created <%= @link.created_at.strftime("%b %d, %Y") %></p>
     <p>Starting Price <%= link_to number_to_currency(@link.price, :unit => "$", :separator => "."), @link.link_remote_url, :target => "_blank" %></p>
+    <p>Current Price <%= link_to number_to_currency(@link.current_price, :unit => "$", :separator => "."), @link.link_remote_url, :target => "_blank" %></p>
 
 		<% if current_user == @link.user %>
 			<%= link_to 'Edit', edit_link_path(@link) %> |

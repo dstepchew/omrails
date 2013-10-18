@@ -1,5 +1,5 @@
 class Link < ActiveRecord::Base
-  attr_accessible :description, :image, :image_remote_url, :store_name, :price, :link_remote_url
+  attr_accessible :description, :image, :image_remote_url, :store_name, :price, :current_price, :link_remote_url
 
 
   validates :description, presence: true
@@ -10,6 +10,7 @@ class Link < ActiveRecord::Base
   validates :store_name, presence: true
   validates :price, presence: true
   validates :link_remote_url, presence: true
+  validates :current_price, presence: true
 
   belongs_to :user
   has_attached_file :image, styles: { medium: "320x240>"}
