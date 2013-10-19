@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131018051028) do
+ActiveRecord::Schema.define(:version => 20131019013703) do
 
   create_table "links", :force => true do |t|
     t.string   "description"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(:version => 20131018051028) do
     t.decimal  "price"
     t.string   "link_remote_url"
     t.decimal  "current_price"
+    t.decimal  "new_price"
   end
 
   add_index "links", ["user_id"], :name => "index_links_on_user_id"
