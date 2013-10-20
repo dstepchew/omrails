@@ -8,20 +8,23 @@
     <th>Date Created</th>
     <th>Original Price</th>
     <th>Current Price</th>
+    
+     <th></th>
     <th></th>
-    <th></th>
+    
   </tr>
 </thead>
 <% @links.each do |link| %>
+ <% if current_user == link.user %>
   <tr>
     <td><%= link_to link.description, link %></td>
     <td><%= link_to link.store_name, link.link_remote_url, :target => "_blank" %></td>
     <td><%= link.created_at.strftime("%b %d, %Y") %></td>
     <td><%= link_to number_to_currency(link.price, :unit => "$", :separator => "."), link.link_remote_url, :target => "_blank" %></td>
     <td><%= link_to number_to_currency(link.current_price, :unit => "$", :separator => "."), link.link_remote_url, :target => "_blank" %></td>
-    <td><%= link_to 'Edit', edit_link_path(link) %></td>
+   <td><%= link_to 'Edit', edit_link_path(link) %></td>
     <td><%= link_to 'Delete', link, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+  </tr><% end %>
 <% end %>
 </table>
 
